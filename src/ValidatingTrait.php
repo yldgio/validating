@@ -408,9 +408,10 @@ trait ValidatingTrait
             $validator->setAttributeNames($this->getValidationAttributeNames());
         }
 
+        $this->withValidator($validator);
         return $validator;
     }
-
+    protected function withValidator($validator){}
     /**
      * Validate the model against it's rules, returning whether
      * or not it passes and setting the error messages on the
